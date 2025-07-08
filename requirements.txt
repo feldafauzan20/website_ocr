@@ -1,0 +1,9 @@
+Flask
+python-dotenv
+python-telegram-bot
+pdfplumber
+pandas
+openpyxl
+python-docx
+google-generativeai
+Pillow
