@@ -1,7 +1,7 @@
 import json
 import os
 
-from flask import Flask, Response, abort, jsonify, send_from_directory
+from flask import Flask, Response, abort, jsonify, send_from_directory, render_template, request, redirect, url_for, make_response
 
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
@@ -12,7 +12,7 @@ app.config['OUTPUT_FOLDER'] = OUTPUT_FOLDER
 
 @app.route('/')
 def home():
-    return "Selamat datang di API OCR Tabel! Gunakan /api/files untuk melihat daftar file JSON."
+    return render_template('index.html')
 
 @app.route('/api/files', methods=['GET'])
 def list_json_files():
